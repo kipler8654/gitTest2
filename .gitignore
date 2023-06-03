@@ -13,9 +13,6 @@ out/
 .sts4-cache
 .idea
 gitTest2.iml
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
 ### NetBeans ###
 /nbproject/private/
