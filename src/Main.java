@@ -5,15 +5,18 @@ public class Main {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
-        for (int i : arr){
-            System.out.print(arr[i]+" ");
-        }
-        System.out.println();
         int i = 0;
         while (i < arr.length) {
             int num = arr[i];
             System.out.print(num + " ");
             i++;
         }
+        System.out.println();
+        int a = 0;
+        do{
+            int num = arr[a];
+            System.out.print(num + " ");
+            a++;
+        }while(a < arr.length);
     }
 }
