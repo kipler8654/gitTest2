@@ -1,28 +1,15 @@
+import java.util.Arrays;
+
 public class Main {
+    static char[] globalArr = {'w', 'o', 'r', 'd'};
+    static int globalNum = 5;
+
     public static void main(String[] args) {
-        int dayOfWeek = 3;
-        switch (dayOfWeek) {
-            case 1:
-                System.out.println("Понеділок");
-                break;
-            case 2:
-                System.out.println("Вівторок");
-                break;
-            case 3:
-                System.out.println("Середа");
-                break;
-            case 4:
-                System.out.println("Четвер");
-                break;
-            case 5:
-                System.out.println("П'ятниця");
-                break;
-            case 6:
-                System.out.println("Субота");
-                break;
-            case 7:
-                System.out.println("Неділя");
-                break;
-        }
+        int[] localArr = {1, 4, 6, 7, 2};
+        char localChar = 'a';
+        System.out.println(Arrays.toString(globalArr));
+        System.out.println(globalNum);
+        System.out.println(Arrays.toString(localArr));
+        System.out.println(localChar);
     }
 }
