@@ -6,7 +6,7 @@ public class Car {
     private String colour;
     private String interior;
 
-    public Car(Builder builder) {
+    private Car(Builder builder) {
         this.wheels = builder.wheels;
         this.body = builder.body;
         this.colour = builder.colour;
