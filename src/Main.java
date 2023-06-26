@@ -3,20 +3,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        try{
+        try {
             exception();
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println("Exception error");
         }
-
     }
+
     public static void exception() throws IOException {
-        try{
+        try {
             throw new NullPointerException();
-        }catch(NullPointerException e){
+        } catch (NullPointerException e) {
             System.out.println("NullPointerException error");
             throw new IOException();
-        }finally {
+        } finally {
             try (BufferedReader br = new BufferedReader(new FileReader("file.java"))) {
                 throw new ArrayIndexOutOfBoundsException();
             } catch (IOException e) {
