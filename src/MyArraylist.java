@@ -51,6 +51,9 @@ public class MyArraylist<T> {
     }
 
     public void set(T value, int index) {
+        if(index < 0 || index >= size){
+            System.out.println("Error");
+        }
         array[index] = value;
     }
 
