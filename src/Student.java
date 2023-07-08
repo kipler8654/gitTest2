@@ -34,8 +34,13 @@ public class Student implements Cloneable {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return new Student(phoneModel, age, name);
+    protected Student clone() throws CloneNotSupportedException {
+        try{
+            Student cloned = (Student) super.clone();
+            return cloned;
+        }catch (CloneNotSupportedException e){
+            return null;
+        }
     }
 
     @Override
