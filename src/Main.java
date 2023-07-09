@@ -1,25 +1,24 @@
 import java.io.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
         try {
             exception();
-        } catch (Exception e) {
-            System.out.println("Exception error");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 
     public static void exception() throws IOException {
         try {
-            throw new NullPointerException();
+            throw new NullPointerException("NullPointerException error");
         } catch (NullPointerException e) {
-            System.out.println("NullPointerException error");
-            throw new IOException();
+            System.out.println(e.getMessage());
+            throw new IOException("IOException error");
         } finally {
-            try (BufferedReader br = new BufferedReader(new FileReader("file.java"))) {
-                throw new ArrayIndexOutOfBoundsException();
-            } catch (IOException e) {
-                System.out.println("IOException error");
+            try (ResourceException resourceException = new ResourceException()) {
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
             }
         }
     }
